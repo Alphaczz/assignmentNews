@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.screen.Activities.ViewPost"
+    android:layout_below="@id/toolbar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home"
+            android:contentDescription="home"
+            android:layout_gravity="start"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="View Post"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="4dp"
+        android:text="News Title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTitleContent"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/imagePlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/toolbar"/>
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="News Description"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewDescContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/textViewAuthorContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-condensed-medium "
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/textViewCategoryContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"/>
+
+    <!-- Add Region TextView -->
+    <TextView
+        android:id="@+id/textViewRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Region"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/textViewRegionContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Created on"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/textViewDateContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"/>
+    <!-- Add Status TextView -->
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/textViewStatusContent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        tools:layout_editor_absoluteX="222dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/like" />
+
+
+            <TextView
+                android:id="@+id/likeCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_margin="6dp"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- Dislike Button with Count -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/dislikeButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/dislike" />
+
+
+            <TextView
+                android:id="@+id/dislikeCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_margin="6dp"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/EditBtn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="80dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:text="Edit"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/DelBtn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/transparent_bg_btn_red"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_red_dark"
+            app:strokeColor="#A50404" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
